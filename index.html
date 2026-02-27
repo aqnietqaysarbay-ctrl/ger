@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AnimeWorld | Stream Anime</title>
+    <style>
+      /* Modernized General Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+      }
+
+      body {
+        background-color: #0b0c10; /* Deeper black */
+        color: #ffffff;
+        line-height: 1.6;
+      }
+
+      /* Clean Header */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 6%;
+        background: rgba(11, 12, 16, 0.95);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .logo {
+        font-size: 22px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .logo span {
+        color: #e50914; /* Netflix-style Red */
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #b3b3b3;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #ffffff;
+      }
+
+      /* Sleek Search Bar */
+      .search-box input {
+        background: #1f2128;
+        border: 1px solid #333;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 20px;
+        outline: none;
+        font-size: 0.85rem;
+        transition: 0.3s;
+      }
+
+      .search-box input:focus {
+        border-color: #e50914;
+        width: 200px;
+      }
+
+      /* Hero Section - High Contrast */
+      .hero {
+        height: 500px;
+        background:
+          linear-gradient(to right, #0b0c10 15%, rgba(0, 0, 0, 0.2)),
+          url("https://images.alphacoders.com/605/605592.jpg");
+        background-size: 1000px;
+        background-position: right;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        padding: 0 8%;
+      }
+
+      .hero-content {
+        max-width: 500px;
+      }
+
+      .hero-content h1 {
+        font-size: 4rem;
+        font-weight: 900;
+        line-height: 1;
+        margin-bottom: 15px;
+      }
+
+      .hero-content p {
+        color: #ccc;
+        margin-bottom: 25px;
+        font-size: 1.1rem;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background: #e50914;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background: #ff1f2d;
+        transform: scale(1.05);
+      }
+
+      /* Minimalist Anime Grid */
+      .container {
+        padding: 50px 6%;
+      }
+
+      .container h2 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        border-left: 4px solid #e50914;
+        padding-left: 15px;
+      }
+
+      .anime-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 30px;
+      }
+
+      .card {
+        background: transparent; /* Removed the ugly grey box */
+        transition: 0.4s ease;
+        cursor: pointer;
+      }
+
+      .card:hover {
+        transform: scale(1.03);
+      }
+
+      .card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        margin-bottom: 15px;
+      }
+
+      .card h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #eee;
+      }
+
+      .card p {
+        color: #777;
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Anime<span>World</span></div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Catalog</a></li>
+          <li><a href="#">Latest</a></li>
+          <li><a href="#">Top 100</a></li>
+        </ul>
+      </nav>
+      <div class="search-box">
+        <input type="text" placeholder="Search anime..." />
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Naruto Shippuden</h1>
+        <p>
+          The journey of a young ninja who seeks recognition from his peers and
+          dreams of becoming the Hokage.
+        </p>
+        <a class="btn">Watch Now</a>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Recently Updated</h2>
+      <div class="anime-grid">
+        <!-- <div class="card">
+          <img
+            src="https://m.media-amazon.com/images/M/MV5BMGY3YTM3N2ItZTA3MS00YWFhLWIyNjgtYWNlZmY1NzYwNTEyXkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_.jpg"
+            alt="One Piece"
+          />
+          <h3>One Piece</h3>
+          <p>Episode 1080 • New</p>
+        </div>
+        <div class="card">
+          <img
+            src="https://m.media-amazon.com/images/M/MV5BNGYyNmI3M2EtZGYzMi00ZWU4LWIzNjQtZTM4NDRmZTk1OTBmXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
+            alt="Jujutsu Kaisen"
+          />
+          <h3>Jujutsu Kaisen</h3>
+          <p>Episode 24 • Completed</p>
+        </div>
+        <div class="card">
+          <img
+            src="https://m.media-amazon.com/images/M/MV5BNDFjYTIxMjctYTQ2ZC00YzQ4LWE3ZTEtZWRlNWZlZWIyMGQ3XkEyXkFqcGdeQXVyMzc5MjE5NTE@._V1_.jpg"
+            alt="Attack on Titan"
+          />
+          <h3>Attack on Titan</h3>
+          <p>Episode 88 • Final Season</p>
+        </div>
+        <div class="card">
+          <img
+            src="https://m.media-amazon.com/images/M/MV5BZjZjNzI5MDctY2YyZC00NmM0LWEwNTYtOGY3MzE1OTkwZGE2XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
+            alt="Demon Slayer"
+          />
+          <h3>Demon Slayer</h3>
+          <p>Episode 12 • Swordsmith Village</p>
+        </div> -->
+      </div>
+    </section>
+
+    <script>
+      let input = document.querySelector("input");
+      let btn = document.querySelector(".btn");
+      window.addEventListener("load", async function add(e) {
+        e.preventDefault();
+        let URL = `https://api.jikan.moe/v4/anime`;
+        let promise = await fetch(URL);
+        let data = await promise.json();
+        console.log(data);
+
+        for (let i = 0; i < data.data.length; i++) {
+          let over = data.data[i];
+          let item = document.createElement("div");
+          item.innerHTML = ` <div class="card">
+               <img
+                 src="${over.images.webp.image_url}"
+                 alt="Jujutsu Kaisen"
+               />
+               <h3 class = "name">${over.title}</h3>
+               <p>Episode ${over.episodes} • Completed</p>
+             </div>`;
+          document.querySelector(".anime-grid").appendChild(item);
+          let name = item.querySelector(".name");
+        }
+
+        input.addEventListener("keydown", function (e) {
+          document.querySelector(".anime-grid").innerHTML = "";
+          if ((e.key === "Enter")) {
+            for (let i = 0; i < data.data.length; i++) {
+              let over = data.data[i];
+              if (
+                over.title
+                  .toLowerCase()
+                  .includes(input.value.toLocaleLowerCase())
+              ) {
+                let card = document.createElement("div");
+                card.innerHTML = ` <div class="card">
+               <img
+                 src="${over.images.webp.image_url}"
+                 alt="Jujutsu Kaisen"
+               />
+               <h3 class = "name">${over.title}</h3>
+               <p>Episode ${over.episodes} • Completed</p>
+             </div>`;
+                document.querySelector(".anime-grid").appendChild(card);
+              }
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
